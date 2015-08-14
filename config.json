@@ -1,0 +1,11 @@
+{
+  "projectPath" : "design",
+  "productionPath" : "production",
+  "deployPath" : "deploy",
+  "librariesPath" : "libraries",
+  "sassPath" : "sass",
+  "cssPath" : "css",
+  "jsPath" : "js",
+  "imgPath" : "img",
+  "swigPath" : "swig"
+}

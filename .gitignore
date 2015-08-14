@@ -1,0 +1,14 @@
+# System files
+.DS_Store
+.idea
+
+# No need to track dependencies
+bower_components/
+node_modules/
+
+# No need to track
+_assets/
+.sass-cache/
+
+# No need to track /production since it is generated content
+production/
