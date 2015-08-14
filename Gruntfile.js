@@ -215,7 +215,7 @@ module.exports = function(grunt) {
           expand : true,
           cwd    : cfg.projectPath + '/' + cfg.imgPath,
           src    : [ '**/*.{png,jpg,gif,svg}' ],
-          dest   : cfg.production + '/' + cfg.imgPath
+          dest   : cfg.productionPath + '/' + cfg.imgPath
         }]
       }
     },
@@ -335,9 +335,9 @@ module.exports = function(grunt) {
         options: {
           globals: {
             css : 'css',
-            js    : 'js',
-            libraries            : 'libraries',
-            img            : 'img'
+            js : 'js',
+            libraries : 'libraries',
+            img : 'img'
           }
         },
         expand : true,
@@ -375,7 +375,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default','',function(){
     grunt.log.writeln('NOPE. Please pick a specific grunt task. :-)');
   });
-  grunt.registerTask('foo', ['swig', 'sass', 'includereplace:dev', 'autoprefixer', 'jshint', 'includes:debug', 'newer:imagemin', 'watch']);
+  grunt.registerTask('design', ['swig', 'sass', 'includereplace:dev', 'autoprefixer', 'jshint', 'includes:debug', 'newer:imagemin', 'watch']);
 
   //grunt.registerTask('deploy', '', function() {
   //  grunt.log.writeln('This task is going to output files for ASP and drop them into');
