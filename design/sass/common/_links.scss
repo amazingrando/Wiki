@@ -1,0 +1,15 @@
+a,
+a:focus {
+  color: $linkColor;
+}
+a:hover {
+  color: lighten($linkColor,10%);
+}
+
+a.new {
+  color: $redBright;
+
+  &:hover {
+    color: lighten($redBright,10%);
+  }
+}

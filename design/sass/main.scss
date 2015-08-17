@@ -7,3 +7,18 @@
 // 	==================================================================
 
 @import 'common/vars';
+@import 'common/type';
+@import 'common/links';
+@import 'common/buttons';
+@import 'common/form';
+
+@import 'modules/header';
+@import 'modules/sidebar';
+@import 'modules/main-content';
+@import 'modules/category-links';
+@import 'modules/nav-page';
+@import 'modules/search';
+
+body {
+  background: url('../img/bkg.jpg') top left $yellow;
+}

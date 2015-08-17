@@ -1,0 +1,13 @@
+.btn-red {
+  color: #fff;
+  background-color: $red;
+  border-color: darken($red,15%);
+
+  &:hover {
+    color: #fff;
+  }
+  &:focus {
+    color: #fff;
+  }
+
+}

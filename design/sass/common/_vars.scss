@@ -4,15 +4,19 @@
 
 //  Fonts
 $ff-sans-serif-default   : Verdana, Geneva, sans-serif;
-$ff-sans-default : "Helvetica Neue", Helvetica, Arial, sans-serif;
-//$ff-sans: "ff-meta-web-pro", $ff-sans-default;
+$ff-sans-default : "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-serif: Georgia, 'Times New Roman', Times, serif;
 
 //  Colors
-$blue: #10499E;
-$lightBlue: #00A6E9;
-$green: #88C86A;
-$yellow: #FEC938;
-$lightYellow : #fff379;
-$red: #E5173F;
+$red: #922A1E;
+$redBright: #BB0000;
+$gold: #C19A46;
+$yellow: #FCF2BF;
+$blue: #0069D6;
+$gray: #F4F4EF;
+$dark: #3D3D3D;
+$darkOnGold: #4B3C1C;
 
-$linkColor: $lightBlue;
+$text: $dark;
+$textOnGold: $darkOnGold;
+$linkColor: $blue;

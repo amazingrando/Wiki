@@ -1,0 +1,30 @@
+.catlinks {
+  background-color: $gray;
+  margin-top: 40px;
+  padding: 10px 15px;
+
+  .mw-normal-catlinks > a {
+    float: left;
+  }
+
+  ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 5px 0 0;
+      padding: 0;
+
+      a {
+        border-right: 1px solid darken($gray,25%);
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+
+//<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Brewed_Awakening" title="Category:Brewed Awakening">Brewed Awakening</a></li><li><a href="/wiki/Category:Brew:Face" title="Category:Brew:Face">Brew:Face</a></li><li><a href="/wiki/Category:Wizardoest:Character_Build" title="Category:Wizardoest:Character Build">Wizardoest:Character Build</a></li><li><a href="/wiki/Category:Brew:Audition_Character" title="Category:Brew:Audition Character">Brew:Audition Character</a></li></ul></div></d

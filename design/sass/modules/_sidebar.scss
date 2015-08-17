@@ -1,0 +1,45 @@
+.sidebar {
+  background-color: $yellow;
+  border: 1px solid $gold;
+  color: $textOnGold;
+  margin-top: 22px;
+  padding: 10px;
+
+  li {
+    line-height: 1.2;
+    margin-bottom: 5px;
+  }
+
+  .portal {
+    padding: 10px;
+
+    h3 {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 0;
+    }
+    
+    + .portal {
+      border-top: 1px solid $gold;
+      padding-top: 20px;
+    }
+  }
+}
+
+
+//<aside class="sidebar">
+//<h2>Sidebar</h2>
+//
+//<div class="portal">
+//<h3>Title</h3>
+//<div class="body">
+//<ul>
+//<li><a href="#">Main Page</a></li>
+//<li><a href="#">Recent changes</a></li>
+//<li><a href="#">Random page</a></li>
+//<li><a href="#">Upload Images/Files</a></li>
+//<li><a href="#">Upload Multiple Images/Files</a></li>
+//</ul>
+//</div>
+//</div>
+//</aside>

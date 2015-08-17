@@ -1,0 +1,20 @@
+.header {
+  background-color: #fff;
+  border-top: 10px solid $red;
+  border-bottom: 1px solid $gold;
+  margin-bottom: 30px;
+}
+.site-name {
+  color: $red;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 10px 0;
+
+  a {
+    color: $red;
+  }
+}
+
+.header ul.list-inline {
+  float: left;
+}

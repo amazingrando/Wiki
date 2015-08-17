@@ -4,7 +4,7 @@
   //	as changes are made.
   // 	==================================================================
 
-  if (location.host == '{{'foo.ar.dev'}}') {
+  if (location.host == '{{'wiki-design.r.dev'}}') {
     $.getScript( '//localhost:35729/livereload.js' )
         .done(function( script, textStatus ) {
           console.log('livereload.js is up and running. The grunt watch task will keep the page fresh as you make edits.');

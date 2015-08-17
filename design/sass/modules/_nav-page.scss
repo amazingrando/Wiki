@@ -1,0 +1,40 @@
+.nav-page {
+  position: relative;
+  top: 4px;
+  padding-left: 15px;
+
+  ul {
+    margin: 0;
+  }
+  li {
+    padding: 0;
+
+    a {
+      background-color: $yellow;
+      border: 1px solid $gold;
+      display: inline-block;
+      padding: 2px 7px;
+    }
+    
+    &.selected {
+      top: -3px;
+      position: relative;
+
+      a {
+        background-color: #fff;
+        border-bottom: none;
+        padding: 4px 13px;
+        position: relative;
+        z-index: 110;
+      }
+    }
+  }
+}
+
+
+//<nav class="nav-page">
+//<ul>
+//<li class="selected"><span><a href="#">User page</a></span></li>
+//<li class="new"><span><a href="#">Discussion</a></span></li>
+//</ul>
+//</nav>
