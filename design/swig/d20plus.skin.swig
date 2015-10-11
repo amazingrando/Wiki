@@ -1,4 +1,68 @@
-{% extends 'templates/html.tpl' %}
+<?php
+/**
+ * Skin file for skin Foo Bar.
+ *
+ * @file
+ * @ingroup Skins
+ */
+
+ /**
+ * SkinTemplate class for d20plus skin
+ * @ingroup Skins
+ */
+class Skind20plus extends SkinTemplate {
+	var $skinname = 'd20plus', $stylename = 'd20plus',
+		$template = 'd20plusTemplate', $useHeadElement = true;
+
+	/**
+	 * This function adds JavaScript via ResourceLoader
+	 *
+	 * Use this function if your skin has a JS file or files.
+	 * Otherwise you won't need this function and you can safely delete it.
+	 *
+	 * @param OutputPage $out
+	 */
+
+	public function initPage( OutputPage $out ) {
+		parent::initPage( $out );
+		$out->addModules( 'js/main.js' );
+	}
+
+	/**
+	 * Add CSS via ResourceLoader
+	 *
+	 * @param $out OutputPage
+	 */
+	function setupSkinUserCss( OutputPage $out ) {
+		parent::setupSkinUserCss( $out );
+		$out->addModuleStyles( array(
+			'css/main.css', 'skins.foobar'
+		) );
+	}
+}
+
+/**
+ * BaseTemplate class for Foo Bar skin
+ *
+ * @ingroup Skins
+ */
+class d20plusTemplate extends BaseTemplate {
+	/**
+	 * Outputs the entire contents of the page
+	 */
+	public function execute() {
+		$this->html( 'headelement' );
+
+/** Your skin's code goes here.
+  * The rest of this page explains what to write here.
+**/
+?>
+<?php $this->printTrail(); ?>
+</body>
+</html><?php
+	}
+}
+?>
 
 {% block page-title %}Base Design - Wiki{% endblock %}
 

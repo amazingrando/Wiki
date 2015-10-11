@@ -1,7 +1,7 @@
 {
   "projectPath" : "design",
   "productionPath" : "production",
-  "deployPath" : "deploy",
+  "deployPath" : "d20plus",
   "librariesPath" : "libraries",
   "sassPath" : "sass",
   "cssPath" : "css",

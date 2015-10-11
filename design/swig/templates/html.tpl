@@ -29,11 +29,11 @@
 
 </head>
 
-<body>
+<body id="top">
 
 {% block main-content %}{% endblock %}
 
-<script type="text/javascript" src="@@jsPath/main.js"></script>
+<script type="text/javascript" src="@@js/main.js"></script>
 {% block scripts %}{% endblock %}
 
 </body>

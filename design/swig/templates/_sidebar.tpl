@@ -1,4 +1,6 @@
-<aside class="sidebar">
+<aside class="sidebar" id="primaryMenu">
+
+  <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
 
   <div class="portal">
     <h3>Tools & Resources</h3>

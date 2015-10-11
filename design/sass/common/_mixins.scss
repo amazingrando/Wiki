@@ -1,0 +1,8 @@
+@mixin fa-before($content) {
+  &:before {
+    content: $content;
+    font-family: $ff-fa;
+    font-size: .85em;
+    margin-right: 4px;
+  }
+}

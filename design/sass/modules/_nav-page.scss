@@ -3,6 +3,11 @@
   top: 4px;
   padding-left: 15px;
 
+  @media screen and (max-width: 500px) {
+    display: block;
+    float: none !important;
+  }
+
   ul {
     margin: 0;
   }
@@ -30,11 +35,3 @@
     }
   }
 }
-
-
-//<nav class="nav-page">
-//<ul>
-//<li class="selected"><span><a href="#">User page</a></span></li>
-//<li class="new"><span><a href="#">Discussion</a></span></li>
-//</ul>
-//</nav>

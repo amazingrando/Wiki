@@ -3,3 +3,8 @@ body {
   font-family: $ff-sans-default;
   font-size: 14px;
 }
+.text-right--sm {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}

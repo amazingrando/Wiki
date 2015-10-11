@@ -1,11 +1,21 @@
 .search--wrapper {
   position: relative;
   top: -7px;
+
+  @media screen and (max-width: 500px) {
+    display: block;
+    float: none !important;
+  }
   
   input {
     height: 24px;
   }
   button {
     padding: 2px 10px;
+  }
+
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
   }
 }

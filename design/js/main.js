@@ -2,7 +2,7 @@
   'use strict';
 
   $(document).ready(function () {
-    //gruntImport('modules/foo.js');
+    gruntImport('modules/scroll-to.js');
   });
 
 })(jQuery);

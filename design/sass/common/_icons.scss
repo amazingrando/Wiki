@@ -1,0 +1,38 @@
+#ca-view a {
+  @include fa-before($fa-var-file-text-o);
+}
+#ca-edit a {
+  @include fa-before($fa-var-pencil);
+}
+#ca-history a {
+  @include fa-before($fa-var-history);
+}
+#ca-watch a {
+  @include fa-before($fa-var-eye);
+}
+#ca-delete a {
+  @include fa-before($fa-var-trash-o);
+}
+#ca-move a {
+  @include fa-before($fa-var-share);
+}
+#ca-protect a {
+  @include fa-before($fa-var-lock);
+}
+#ca-nstab-main a {
+  @include fa-before($fa-var-file-text-o);
+}
+#ca-talk a {
+  @include fa-before($fa-var-comments-o);
+}
+
+#pt-userpage a {
+  @include fa-before($fa-var-user);
+}
+#pt-mytalk a {
+  @include fa-before($fa-var-comment);
+}
+#pt-logout a {
+  @include fa-before($fa-var-sign-out);
+}
+

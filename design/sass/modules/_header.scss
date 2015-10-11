@@ -6,9 +6,14 @@
 }
 .site-name {
   color: $red;
+  display: inline-block;
   font-weight: bold;
   font-size: 24px;
-  margin: 10px 0;
+  margin: 10px 0 0;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 10px;
+  }
 
   a {
     color: $red;
@@ -17,4 +22,16 @@
 
 .header ul.list-inline {
   float: left;
+}
+
+#menu {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100;
+
+  @include fa-before($fa-var-bars);
 }

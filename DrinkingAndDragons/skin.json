@@ -1,0 +1,38 @@
+{
+  "name": "DrinkingAndDragons",
+  "version": "1.0",
+  "author": "...",
+  "url": "https://www.mediawiki.org/wiki/Skin:DrinkingAndDragons",
+  "descriptionmsg": "DrinkingAndDragons-desc",
+  "namemsg": "DrinkingAndDragons-example",
+  "license-name": "CC0-1.0",
+  "type": "skin",
+  "ValidSkinNames": {
+    "drinkinganddragons": "DrinkingAndDragons"
+  },
+  "MessagesDirs": {
+    "DrinkingAndDragons": [
+      "i18n"
+    ]
+  },
+  "ResourceModules": {
+    "skins.drinkinganddragons": {
+      "styles": {
+        "css/bootstrap.min.css": {
+          "media": "screen"
+        },
+        "css/main.css": {
+          "media": "screen"
+        }
+      }
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "DrinkingAndDragons"
+  },
+  "AutoloadClasses": {
+    "SkinDrinkingAndDragons": "DrinkingAndDragons.skin.php"
+  },
+  "manifest_version": 1
+}

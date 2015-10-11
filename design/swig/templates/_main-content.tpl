@@ -1,4 +1,29 @@
 <article class="main-content-wrapper">
+
+  <div class="row main-content-nav">
+    <div class="col-sm-6">
+      <ul class="p-views">
+        <li id="ca-view" class="selected"><span><a href="/wiki/Shaman_Spell_List">Read</a></span></li>
+        <li id="ca-edit"><span><a href="/w/index.php?title=Shaman_Spell_List&amp;action=edit" title="You can edit this page. Please use the preview button before saving [ctrl-option-e]" accesskey="e">Edit</a></span></li>
+        <li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Shaman_Spell_List&amp;action=history" title="Past revisions of this page [ctrl-option-h]" accesskey="h">View history</a></span></li>
+        <li id="ca-watch" class="icon"><span><a href="/w/index.php?title=Shaman_Spell_List&amp;action=watch&amp;token=d758355a2c7f3e68338f92b877c7ef7055d3642a%2B%5C" title="Add this page to your watchlist [ctrl-option-w]" accesskey="w">Watch</a></span></li>
+      </ul>
+    </div>
+
+    <div class="col-sm-6 text-right--sm">
+      <ul class="p-actions">
+        <li id="ca-delete">
+          <a href="/w/index.php?title=Shaman_Spell_List&amp;action=delete" title="Delete this page [ctrl-option-d]" accesskey="d">Delete</a>
+        </li>
+        <li id="ca-move">
+          <a href="/wiki/Special:MovePage/Shaman_Spell_List" title="Move this page [ctrl-option-m]" accesskey="m">Move</a>
+        </li>
+        <li id="ca-protect">
+          <a href="/w/index.php?title=Shaman_Spell_List&amp;action=protect" title="Protect this page [ctrl-option-=]" accesskey="=">Protect</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="mw-content-ltr main-content">
 
     <h1 class="page-title">Brew:44 Snowbody Knows What is Going</h1>

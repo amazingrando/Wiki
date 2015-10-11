@@ -1,0 +1,23 @@
+.main-content-nav {
+  margin-bottom: 20px;
+}
+.p-views,
+.p-actions {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px 0 0;
+    padding: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.selected a {
+      color: $text;
+    }
+  }
+}

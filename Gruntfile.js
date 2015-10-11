@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     // 	=======================================================
     swig: {
       options: {
-        //data: grunt.file.readJSON('design/data/example.json')
+        data: {'output': grunt.option('output')},
       },
       compile: {
         files: [{
@@ -74,6 +74,17 @@ module.exports = function(grunt) {
           src    : '**/*.swig',
           dest   : cfg.productionPath,
           ext    : '.html',
+          extDot : 'last'
+        }]
+      },
+      php: {
+        files: [{
+          expand : true,
+          flatten: true,
+          cwd    : cfg.projectPath + '/' + cfg.swigPath,
+          src    : '**/*.swig',
+          dest   : cfg.deployPath,
+          ext    : '.php',
           extDot : 'last'
         }]
       }
@@ -237,7 +248,7 @@ module.exports = function(grunt) {
       // Causes swig template changes to trigger the swig task.
       html: {
         files: [ cfg.projectPath + '/' + cfg.swigPath + '/**/*.swig', cfg.projectPath + '/' + cfg.swigPath + '/**/*.tpl' ],
-        tasks: [ 'swig','includereplace:dev' ],
+        tasks: [ 'swig','includereplace:dev','copy:php' ],
         options: {
           nospawn: true
         }
@@ -245,7 +256,7 @@ module.exports = function(grunt) {
       // Causes scss file changes to trigger scss file compilation and autoprefixer.
       styles: {
         files: [ cfg.projectPath + '/' + cfg.sassPath + '/**/*.scss' ],
-        tasks: [ 'sass', 'autoprefixer', 'includereplace:dev' ],
+        tasks: [ 'sass', 'autoprefixer', 'includereplace:dev','copy:php' ],
         options: {
           nospawn: true
         }
@@ -253,7 +264,7 @@ module.exports = function(grunt) {
       // Causes script file changes in the source directory to be tested with jshint and processed by includes.
       scripts: {
         files: [ cfg.projectPath + '/' + cfg.jsPath + '/**/*.js' ],
-        tasks: [ 'newer:jshint:debug', 'includes:debug' ],
+        tasks: [ 'newer:jshint:debug', 'includes:debug','copy:php' ],
         options: {
           nospawn: true
         }
@@ -261,7 +272,7 @@ module.exports = function(grunt) {
       // Causes image file changes to trigger image optimization
       images: {
         files: [ cfg.projectPath + '/' + cfg.imgPath + '/**/*.{png,jpg,gif,svg}' ],
-        tasks: [ 'newer:imagemin' ],
+        tasks: [ 'newer:imagemin','copy:php' ],
         options: {
           nospawn: true
         }
@@ -273,54 +284,22 @@ module.exports = function(grunt) {
     //
     //	Configures the grunt-contrib-copy task with deployment options.
     // 	=======================================================
-    //copy: {
-    //  deploy_css: {
-    //    files: [{
-    //      expand: true,
-    //      cwd: cfg.projectPath,
-    //      src: [
-    //        cfg.cssPath + '/*.css',
-    //        cfg.librariesPath +'/fontawesome/font-awesome.css',
-    //        cfg.librariesPath +'/jquery-ui/jquery-ui.js'
-    //      ],
-    //      dest: cfg.asp.projectPath + '/' + cfg.asp.cssPath,
-    //      flatten: true
-    //    }]
-    //  },
-    //  deploy_img: {
-    //    files: [{
-    //      expand: true,
-    //      cwd: cfg.projectPath + '/' + cfg.imgPath,
-    //      src: [ '**/*', '../*.{png,jpg,gif,svg,ico}' ],
-    //      dest: cfg.asp.projectPath + '/' + cfg.asp.imgPath
-    //    }]
-    //  },
-    //  deploy_js: {
-    //    files: [{
-    //      expand: true,
-    //      cwd: cfg.projectPath + '/' + cfg.jsPath,
-    //      src: [
-    //        '*.js',
-    //        '../libraries/modernizr/modernizr.js',
-    //        '../libraries/jquery/jquery.js',
-    //        '../libraries/jquery-ui/jquery-ui.js',
-    //      ],
-    //      dest: cfg.asp.projectPath + '/' + cfg.asp.jsPath,
-    //      flatten: true
-    //    }]
-    //  },
-    //  deploy_html: {
-    //    files: [{
-    //      expand: true,
-    //      cwd: cfg.projectPath,
-    //      src: [
-    //        '*.html'
-    //      ],
-    //      dest: cfg.asp.projectPath,
-    //      flatten: true
-    //    }]
-    //  }
-    //},
+    copy: {
+      php: {
+        files: [{
+          expand: true,
+          cwd: cfg.productionPath,
+          src: [
+            cfg.cssPath + '/*.css',
+            cfg.imgPath +'/**.*',
+            cfg.jsPath +'/**.js',
+            cfg.librariesPath +'/**.*'
+          ],
+          dest: cfg.deployPath,
+          flatten: false
+        }]
+      },
+    },
 
     // 	=======================================================
     //	Include Replace — https://github.com/alanshaw/grunt-include-replace
@@ -341,7 +320,7 @@ module.exports = function(grunt) {
           }
         },
         expand : true,
-        src    : [ cfg.productionPath + '/*.html', cfg.productionPath + '/css/main.css' ]
+        src    : [ cfg.productionPath + '/*.html', cfg.productionPath + '/css/main.css', cfg.deployPath + '/*.php', cfg.deployPath + '/css/main.css' ]
       }
     }
   });
@@ -372,14 +351,11 @@ module.exports = function(grunt) {
   //
   //	In the terminal type "grunt" to execute the "default" task.
   // 	=======================================================
+  var output = grunt.option('output') == 'php' ? 'php' : 'compile';
+
   grunt.registerTask('default','',function(){
     grunt.log.writeln('NOPE. Please pick a specific grunt task. :-)');
   });
-  grunt.registerTask('design', ['swig', 'sass', 'includereplace:dev', 'autoprefixer', 'jshint', 'includes:debug', 'newer:imagemin', 'watch']);
-
-  //grunt.registerTask('deploy', '', function() {
-  //  grunt.log.writeln('This task is going to output files for ASP and drop them into');
-  //  grunt.task.run(['swig', 'sass', 'autoprefixer', 'copy:deploy_html', 'copy:deploy_css','copy:deploy_img','copy:deploy_js', 'includereplace:deploy', 'includereplace:dev']);
-  //});
+  grunt.registerTask('design', ['swig:compile', 'sass', 'includereplace:dev', 'autoprefixer', 'jshint', 'includes:debug', 'newer:imagemin', 'watch']);
 
 };
