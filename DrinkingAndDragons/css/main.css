@@ -301,6 +301,8 @@ a.new {
       margin-top: 15px;
       margin-bottom: 0;
       text-align: right; } }
+  #p-personal h3 {
+    display: none; }
   #p-personal ul {
     list-style: none;
     margin: 0;
