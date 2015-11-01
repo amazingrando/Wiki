@@ -3,6 +3,7 @@
 
   $(document).ready(function () {
 /* Begin: design/js/modules/scroll-to.js */
+    console.log('My update worked!');
     var $root = $('html, body'),
         offset = 0;
 

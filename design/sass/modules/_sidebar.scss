@@ -5,35 +5,44 @@
   margin-top: 29px;
   padding: 10px;
 
-  li {
-    line-height: 1.2;
-    margin-bottom: 5px;
+  ul {
+    margin: 0;
+    padding: 0;
   }
 
-  .portal {
+  li {
+    line-height: 1.2;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0;
+  }
+  @media (max-width: 768px) {
+    li {
+      display: inline-block;
+      &:after {
+        content: ', ';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+  .mw-portlet {
     padding: 10px;
 
-    h3 {
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 0;
-    }
-    
-    + .portal {
+
+
+    + .mw-portlet {
       border-top: 1px solid $gold;
       padding-top: 20px;
     }
 
-    @media (max-width: 768px) {
-      li {
-        display: inline-block;
-        &:after {
-          content: ', ';
-        }
-        &:last-child:after {
-          content: '';
-        }
-      }
-    }
+
   }
 }

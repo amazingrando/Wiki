@@ -27,6 +27,31 @@
   <div class="mw-content-ltr main-content">
 
     <h1 class="page-title">Brew:44 Snowbody Knows What is Going</h1>
+    <div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" id="togglelink">hide</a>]&nbsp;</span></div>
+      <ul>
+        <li class="toclevel-1 tocsection-1"><a href="#To_do"><span class="tocnumber">1</span> <span class="toctext">To do</span></a></li>
+        <li class="toclevel-1 tocsection-2"><a href="#Campaigns"><span class="tocnumber">2</span> <span class="toctext">Campaigns</span></a>
+          <ul>
+            <li class="toclevel-2 tocsection-3"><a href="#DM.27d"><span class="tocnumber">2.1</span> <span class="toctext">DM'd</span></a></li>
+            <li class="toclevel-2 tocsection-4"><a href="#Played_in"><span class="tocnumber">2.2</span> <span class="toctext">Played in</span></a></li>
+          </ul>
+        </li>
+        <li class="toclevel-1 tocsection-5"><a href="#RPGs_to_explore"><span class="tocnumber">3</span> <span class="toctext">RPGs to explore</span></a>
+          <ul>
+            <li class="toclevel-2 tocsection-6"><a href="#Incoming"><span class="tocnumber">3.1</span> <span class="toctext">Incoming</span></a></li>
+            <li class="toclevel-2 tocsection-7"><a href="#Kickstarted"><span class="tocnumber">3.2</span> <span class="toctext">Kickstarted</span></a></li>
+            <li class="toclevel-2 tocsection-8"><a href="#Interested_In"><span class="tocnumber">3.3</span> <span class="toctext">Interested In</span></a></li>
+            <li class="toclevel-2 tocsection-9"><a href="#Played"><span class="tocnumber">3.4</span> <span class="toctext">Played</span></a></li>
+            <li class="toclevel-2 tocsection-10"><a href="#Read"><span class="tocnumber">3.5</span> <span class="toctext">Read</span></a></li>
+          </ul>
+        </li>
+        <li class="toclevel-1 tocsection-11"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+        <li class="toclevel-1 tocsection-12"><a href="#Icons"><span class="tocnumber">5</span> <span class="toctext">Icons</span></a></li>
+        <li class="toclevel-1 tocsection-13"><a href="#Characters_Built"><span class="tocnumber">6</span> <span class="toctext">Characters Built</span></a></li>
+        <li class="toclevel-1 tocsection-14"><a href="#Wiki_notes"><span class="tocnumber">7</span> <span class="toctext">Wiki notes</span></a></li>
+        <li class="toclevel-1 tocsection-15"><a href="#General_notes"><span class="tocnumber">8</span> <span class="toctext">General notes</span></a></li>
+      </ul>
+    </div>
     <p>I show up to Spanish study group and Becca had a dead faerie in her purse. It was so cute. And dead. She had to hit the road for some extra-curricular thing (Because doing magic isn't extra-curricular enough for her?). I tried talking with
       <a href="#">James</a> in private, but then one of the new guys from study group is a telepath and he blew our cover. The
       <a href="#" class="new">Irish chick <i class="fa fa-pencil"></i></a> has got faerie connections (Who would have thought?), so she might help us get the little woman to proper rest.</p>

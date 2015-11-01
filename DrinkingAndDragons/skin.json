@@ -24,9 +24,14 @@
         "css/main.css": {
           "media": "screen"
         }
-      }
+      },
+      "scripts": [
+        "js/main.js"
+      ],
+      "position": "top"
     }
   },
+
   "ResourceFileModulePaths": {
     "localBasePath": "",
     "remoteSkinPath": "DrinkingAndDragons"

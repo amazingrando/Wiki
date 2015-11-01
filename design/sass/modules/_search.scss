@@ -19,3 +19,55 @@
     margin-bottom: 0;
   }
 }
+#p-search {
+  input[type="search"] {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-color: #C19A46;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    color: #555;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.5;
+
+    padding: 5px 10px;
+
+    width: auto;
+    height: 24px;
+    vertical-align: middle;
+
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+  input[type="submit"] {
+    background-image: none;
+    background-color: #922A1E;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    border-color: #531811;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+
+    line-height: 1;
+    font-size: 13px;
+    font-weight: 400;
+
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+  }
+}
+
+//<form action="/w/index.php" role="search" class="mw-portlet" id="p-search">
+//  <input type="hidden" name="title" value="Special:Search">
+//
+//  <!--<h3><label for="searchInput">Search</label></h3>-->
+//
+//  <input type="search" name="search" placeholder="Search" title="Search Drinking and Dragons [ctrl-alt-f]" accesskey="f" id="searchInput" autocomplete="off">
+//  <input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists">
+//</form>

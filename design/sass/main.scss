@@ -23,6 +23,10 @@
 @import 'modules/nav-page';
 @import 'modules/search';
 @import 'modules/personal-nav';
+@import 'modules/p_namespaces';
+@import 'modules/p_views';
+@import 'modules/footer';
+@import 'modules/toc';
 
 body {
   background: url('../img/bkg.jpg') top left $yellow;

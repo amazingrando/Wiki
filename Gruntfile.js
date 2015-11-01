@@ -356,6 +356,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default','',function(){
     grunt.log.writeln('NOPE. Please pick a specific grunt task. :-)');
   });
-  grunt.registerTask('design', ['swig:compile', 'sass', 'includereplace:dev', 'autoprefixer', 'jshint', 'includes:debug', 'newer:imagemin', 'watch']);
+  grunt.registerTask('design', ['swig:compile', 'sass', 'includereplace:dev', 'autoprefixer', 'includes:debug', 'newer:imagemin', 'watch']);
 
 };
