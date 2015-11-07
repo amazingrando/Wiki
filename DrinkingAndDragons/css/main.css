@@ -88,6 +88,10 @@ h2 {
   .text-right--sm {
     text-align: right; } }
 
+table th {
+  font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
 a,
 a:focus {
   color: #0069D6; }
@@ -235,7 +239,10 @@ a.new {
   padding: 0 5px 10px; }
 .main-content p,
 .main-content ul,
-.main-content ol {
+.main-content ol,
+.main-content dd,
+.main-content dl,
+.main-content dt {
   font-family: Georgia, "Times New Roman", Times, serif; }
 .main-content h2 {
   color: #922A1E; }
@@ -261,8 +268,7 @@ a.new {
   border: none;
   border-radius: 5px;
   font-size: 14px;
-  padding: 15px;
-  /* ninja */ }
+  padding: 15px; }
 .main-content img {
   max-width: 100%;
   height: 100%; }

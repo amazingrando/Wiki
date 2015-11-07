@@ -206,7 +206,7 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
           </div>
         </div>
       </div>
-      <footer class="container">
+      <footer>
         <div class="row">
           <div class="col-xs-12">
             <?php foreach ( $this->getFooterLinks() as $category => $links ) { ?>
