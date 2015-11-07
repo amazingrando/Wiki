@@ -1,0 +1,20 @@
+.gallery {
+
+  
+  .gallerybox {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-right: 7px;
+
+    div.thumb {
+      border:none;
+    }
+  }
+  .gallerytext {
+    font-family: $ff-sans-default !important;
+    line-height: 1.2;
+    padding: 5px 10px 10px;
+  }
+}

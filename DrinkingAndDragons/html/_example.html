@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{% block page-title %}Page Title{% endblock %}</title>
+  <title>Page Title</title>
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
@@ -20,18 +20,40 @@
   <script type="text/javascript" src="@@libraries/modernizr.js"></script>
   <script type="text/javascript" src="@@libraries/jquery.js"></script>
 
-  {% include "_head--live-reload.tpl" %}
+  <script>
+  // 	==================================================================
+  //	FOR PRODUCTION ONLY — we load a script that keep the page refreshed
+  //	as changes are made.
+  // 	==================================================================
 
-  {% block head %}{% endblock %}
+  if (location.host == 'wiki-design.r.dev') {
+    $.getScript( '//localhost:35729/livereload.js' )
+        .done(function( script, textStatus ) {
+          console.log('livereload.js is up and running. The grunt watch task will keep the page fresh as you make edits.');
+        });
+  } else {
+    console.log('livereload.js did not load and the grunt watch task will not refresh the page. Are you on a dev domain?');
+  }
+  // 	END ===============================================================
+</script>
+
+
+  
 
 </head>
 
 <body id="top">
 
-{% block main-content %}{% endblock %}
+
+
+  <h2>How to iterate through .json</h2>
+
+  
+
+
 
 <script type="text/javascript" src="@@js/main.js"></script>
-{% block scripts %}{% endblock %}
+
 
 </body>
 </html>

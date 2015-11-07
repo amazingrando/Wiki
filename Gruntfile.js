@@ -72,19 +72,8 @@ module.exports = function(grunt) {
           flatten: true,
           cwd    : cfg.projectPath + '/' + cfg.swigPath,
           src    : '**/*.swig',
-          dest   : cfg.productionPath,
+          dest   : cfg.productionPath + '/html',
           ext    : '.html',
-          extDot : 'last'
-        }]
-      },
-      php: {
-        files: [{
-          expand : true,
-          flatten: true,
-          cwd    : cfg.projectPath + '/' + cfg.swigPath,
-          src    : '**/*.swig',
-          dest   : cfg.deployPath,
-          ext    : '.php',
           extDot : 'last'
         }]
       }
@@ -248,7 +237,7 @@ module.exports = function(grunt) {
       // Causes swig template changes to trigger the swig task.
       html: {
         files: [ cfg.projectPath + '/' + cfg.swigPath + '/**/*.swig', cfg.projectPath + '/' + cfg.swigPath + '/**/*.tpl' ],
-        tasks: [ 'swig','includereplace:dev','copy:php' ],
+        tasks: [ 'swig','includereplace:dev'],
         options: {
           nospawn: true
         }
@@ -256,7 +245,7 @@ module.exports = function(grunt) {
       // Causes scss file changes to trigger scss file compilation and autoprefixer.
       styles: {
         files: [ cfg.projectPath + '/' + cfg.sassPath + '/**/*.scss' ],
-        tasks: [ 'sass', 'autoprefixer', 'includereplace:dev','copy:php' ],
+        tasks: [ 'sass', 'autoprefixer', 'includereplace:dev' ],
         options: {
           nospawn: true
         }
@@ -264,7 +253,7 @@ module.exports = function(grunt) {
       // Causes script file changes in the source directory to be tested with jshint and processed by includes.
       scripts: {
         files: [ cfg.projectPath + '/' + cfg.jsPath + '/**/*.js' ],
-        tasks: [ 'newer:jshint:debug', 'includes:debug','copy:php' ],
+        tasks: [ 'newer:jshint:debug', 'includes:debug' ],
         options: {
           nospawn: true
         }
@@ -272,33 +261,11 @@ module.exports = function(grunt) {
       // Causes image file changes to trigger image optimization
       images: {
         files: [ cfg.projectPath + '/' + cfg.imgPath + '/**/*.{png,jpg,gif,svg}' ],
-        tasks: [ 'newer:imagemin','copy:php' ],
+        tasks: [ 'newer:imagemin' ],
         options: {
           nospawn: true
         }
       }
-    },
-
-    // 	=======================================================
-    //	Copy — https://github.com/gruntjs/grunt-contrib-copy
-    //
-    //	Configures the grunt-contrib-copy task with deployment options.
-    // 	=======================================================
-    copy: {
-      php: {
-        files: [{
-          expand: true,
-          cwd: cfg.productionPath,
-          src: [
-            cfg.cssPath + '/*.css',
-            cfg.imgPath +'/**.*',
-            cfg.jsPath +'/**.js',
-            cfg.librariesPath +'/**.*'
-          ],
-          dest: cfg.deployPath,
-          flatten: false
-        }]
-      },
     },
 
     // 	=======================================================
@@ -320,7 +287,7 @@ module.exports = function(grunt) {
           }
         },
         expand : true,
-        src    : [ cfg.productionPath + '/*.html', cfg.productionPath + '/css/main.css', cfg.deployPath + '/*.php', cfg.deployPath + '/css/main.css' ]
+        src    : [ cfg.productionPath + '/*.html', cfg.productionPath + '/css/main.css' ]
       }
     }
   });

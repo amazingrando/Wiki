@@ -36,3 +36,8 @@
   @include fa-before($fa-var-sign-out);
 }
 
+#ca-addsection a {
+  &:before {
+    content: 'Add Section ';
+  }
+}

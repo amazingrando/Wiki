@@ -3,6 +3,11 @@ body {
   font-family: $ff-sans-default;
   font-size: 14px;
 }
+h1,
+h2 {
+  font-family:$ff-sans-bold-default ;
+  font-weight: normal !important;
+}
 .text-right--sm {
   @media screen and (min-width: 768px) {
     text-align: right;

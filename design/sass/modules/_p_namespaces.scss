@@ -11,5 +11,8 @@
       display: inline-block;
       margin-right: 5px;
     }
+    li.new a {
+      color: $red;
+    }
   }
 }

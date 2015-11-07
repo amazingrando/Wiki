@@ -1,7 +1,6 @@
 {
   "projectPath" : "design",
-  "productionPath" : "production",
-  "deployPath" : "d20plus",
+  "productionPath" : "DrinkingAndDragons",
   "librariesPath" : "libraries",
   "sassPath" : "sass",
   "cssPath" : "css",
