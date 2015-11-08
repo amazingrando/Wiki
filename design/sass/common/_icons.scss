@@ -41,3 +41,9 @@
     content: 'Add Section ';
   }
 }
+
+#pt-facebook .mw-facebook-logo {
+  background-image: none !important;
+  padding-left: 0 !important;
+  @include fa-before($fa-var-facebook-square);
+}

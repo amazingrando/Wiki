@@ -74,6 +74,15 @@
 #ca-addsection a:before {
   content: 'Add Section '; }
 
+#pt-facebook .mw-facebook-logo {
+  background-image: none !important;
+  padding-left: 0 !important; }
+  #pt-facebook .mw-facebook-logo:before {
+    content: "";
+    font-family: "FontAwesome";
+    font-size: .85em;
+    margin-right: 4px; }
+
 body {
   color: #3D3D3D;
   font-family: "proxima_nova_alt_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
