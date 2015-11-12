@@ -109,7 +109,7 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 
 
 
-<div class="container">
+<div class="container-fluid container-fluid-fix">
   <div class="row">
     <div class="col-sm-9 col-sm-push-3">
       <div class="main-content-container">

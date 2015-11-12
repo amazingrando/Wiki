@@ -37,3 +37,9 @@ body {
   background: url('../img/bkg.jpg') top left $yellow;
   padding-bottom: 50px;
 }
+.container-fluid-fix {
+  @media screen and (min-width: 700px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

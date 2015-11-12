@@ -540,3 +540,8 @@ footer {
 body {
   background: url("../img/bkg.jpg") top left #FCF2BF;
   padding-bottom: 50px; }
+
+@media screen and (min-width: 700px) {
+  .container-fluid-fix {
+    margin-left: 20px;
+    margin-right: 20px; } }
