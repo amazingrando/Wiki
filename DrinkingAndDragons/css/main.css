@@ -89,7 +89,8 @@ body {
   font-size: 14px; }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal !important; }
 
@@ -536,6 +537,10 @@ footer {
 
 .mw-changeslist-title {
   font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.page-Special_UserLogin_signup #userloginForm,
+.page-Special_UserLogin_signup .mw-createacct-benefits-container {
+  float: none; }
 
 body {
   background: url("../img/bkg.jpg") top left #FCF2BF;

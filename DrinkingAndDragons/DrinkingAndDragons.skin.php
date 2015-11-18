@@ -87,7 +87,7 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 
 		<header class="container-fluid header">
       <div class="row">
-        <div class="container">
+        <div class="container-fluid container-fluid-fix">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-5">
               <a href="#primaryMenu" id="menu" class="visible-xs-inline-block">Menu</a>

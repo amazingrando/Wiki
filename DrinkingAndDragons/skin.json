@@ -19,13 +19,13 @@
     "skins.drinkinganddragons": {
       "styles": {
         "css/bootstrap.min.css": {
-          "media": "screen"
+          "media": "screen,print"
         },
         "css/font-awesome.min.css": {
-          "media": "screen"
+          "media": "screen,print"
         },
         "css/main.css": {
-          "media": "screen"
+          "media": "screen,print"
         }
       },
       "scripts": [
