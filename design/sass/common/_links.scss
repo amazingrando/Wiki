@@ -13,3 +13,6 @@ a.new {
     color: lighten($redBright,10%);
   }
 }
+a[href]:after {
+  content: '';
+}

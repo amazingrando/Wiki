@@ -1,0 +1,22 @@
+@media print {
+  .header,
+  .main-content-utilities,
+  .main-content-nav,
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  .main-content-container-wrapper {
+    left: 0;
+    width: 100%;
+  }
+  .main-content-wrapper {
+    border: none;
+  }
+  .main-content .page-title {
+    border-color: black;
+  }
+  .main-content h2 {
+    border-color: black;
+  }
+}

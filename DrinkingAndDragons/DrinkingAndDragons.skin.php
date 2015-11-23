@@ -111,9 +111,9 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 
 <div class="container-fluid container-fluid-fix">
   <div class="row">
-    <div class="col-sm-9 col-sm-push-3">
+    <div class="col-sm-9 col-sm-push-3 main-content-container-wrapper">
       <div class="main-content-container">
-        <div class="row">
+        <div class="row main-content-utilities">
 
           <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right">
             <div class="text-right search--wrapper">
@@ -233,7 +233,7 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
       </footer>
     </div>
 
-    <div class="col-sm-3 col-sm-pull-9">
+    <div class="col-sm-3 col-sm-pull-9 sidebar-wrapper">
       <aside class="sidebar" id="primaryMenu">
       <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
       <?php
