@@ -549,7 +549,10 @@ footer {
   .header,
   .main-content-utilities,
   .main-content-nav,
-  .sidebar-wrapper {
+  .sidebar-wrapper,
+  #catlinks,
+  footer,
+  .printfooter {
     display: none; }
 
   .main-content-container-wrapper {

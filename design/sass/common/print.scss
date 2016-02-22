@@ -2,7 +2,10 @@
   .header,
   .main-content-utilities,
   .main-content-nav,
-  .sidebar-wrapper {
+  .sidebar-wrapper,
+  #catlinks,
+  footer,
+  .printfooter {
     display: none;
   }
 
@@ -19,4 +22,6 @@
   .main-content h2 {
     border-color: black;
   }
+
+
 }
