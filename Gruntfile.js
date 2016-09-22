@@ -280,14 +280,14 @@ module.exports = function(grunt) {
       dev: {
         options: {
           globals: {
-            css : 'css',
-            js : 'js',
-            libraries : 'libraries',
-            img : 'img'
+            css : '../css',
+            js : '../js',
+            libraries : '../libraries',
+            img : '../img'
           }
         },
         expand : true,
-        src    : [ cfg.productionPath + '/*.html', cfg.productionPath + '/css/main.css' ]
+        src    : [ cfg.productionPath + '/**/*.html', cfg.productionPath + '/css/main.css' ]
       }
     }
   });
@@ -303,7 +303,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-include-replace');
   grunt.loadNpmTasks('grunt-contrib-copy');
