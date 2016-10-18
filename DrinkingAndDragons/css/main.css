@@ -117,6 +117,12 @@ a.new {
 a[href]:after {
   content: ''; }
 
+a.external:after {
+  content: '\f08e';
+  font-family: "FontAwesome";
+  font-size: .7em;
+  margin-left: 3px; }
+
 .btn-red {
   color: #fff;
   background-color: #922A1E;

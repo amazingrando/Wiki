@@ -16,3 +16,11 @@ a.new {
 a[href]:after {
   content: '';
 }
+a.external {
+  &:after {
+    content: '\f08e';
+    font-family: $ff-fa;
+    font-size: .7em;
+    margin-left: 3px;
+  }
+}
