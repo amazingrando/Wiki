@@ -254,6 +254,11 @@ a.external:after {
   padding-top: 10px;
   position: relative;
   z-index: 100; }
+  .main-content-wrapper:before, .main-content-wrapper:after {
+    content: " ";
+    display: table; }
+  .main-content-wrapper:after {
+    clear: both; }
 
 .main-content .page-title {
   border-bottom: 1px solid #C19A46;
@@ -328,6 +333,7 @@ a.external:after {
 .catlinks {
   background-color: #F4F4EF;
   border-radius: 3px;
+  clear: both;
   margin-top: 40px;
   padding: 10px 15px; }
   .catlinks .mw-normal-catlinks > a {
