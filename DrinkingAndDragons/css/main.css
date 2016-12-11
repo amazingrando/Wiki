@@ -177,6 +177,14 @@ a.external:after {
   line-height: 1.2;
   padding: 5px 10px 10px; }
 
+.floatright {
+  margin-left: 10px;
+  margin-bottom: 10px; }
+
+.floatleft {
+  margin-right: 10px;
+  margin-bottom: 10px; }
+
 .header {
   background-color: #fff;
   border-top: 10px solid #922A1E;
@@ -600,7 +608,9 @@ footer {
   .main-content .page-title {
     border-color: black; }
   .main-content h2 {
-    border-color: black; } }
+    border-color: black; }
+  .page-break {
+    page-break-after: always; } }
 
 body {
   background: url("../img/bkg.jpg") top left #FCF2BF;
