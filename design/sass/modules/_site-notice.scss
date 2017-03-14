@@ -1,0 +1,14 @@
+#siteNotice {
+  background: $yellow;
+  border-radius: 3px;
+  border: 1px solid lighten($gold,15%);
+  color: $textOnGold;
+  font-family: $ff-sans-default;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+
+  p {
+    font-family: $ff-sans-default;
+    margin-bottom: 0;
+  }
+}

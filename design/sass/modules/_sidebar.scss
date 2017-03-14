@@ -19,8 +19,8 @@
     padding: 0;
   }
   h3 {
-    font-family:$ff-sans-bold-default ;
     font-size: 16px;
+    font-weight: bold;
     margin-top: 0;
   }
   @media (max-width: 768px) {
@@ -37,13 +37,9 @@
   .mw-portlet {
     padding: 10px;
 
-
-
     + .mw-portlet {
       border-top: 1px solid $gold;
       padding-top: 20px;
     }
-
-
   }
 }

@@ -85,22 +85,20 @@
 
 body {
   color: #3D3D3D;
-  font-family: "proxima_nova_alt_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px; }
 
 h1,
 h2,
 h3 {
-  font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal !important; }
+  font-weight: bold; }
 
 @media screen and (min-width: 768px) {
   .text-right--sm {
     text-align: right; } }
 
 table th {
-  font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal; }
+  font-weight: bold; }
 
 a,
 a:focus {
@@ -173,7 +171,7 @@ a.external:after {
     border: none; }
 
 .gallery .gallerytext {
-  font-family: "proxima_nova_alt_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
   line-height: 1.2;
   padding: 5px 10px 10px; }
 
@@ -237,8 +235,8 @@ a.external:after {
     margin-bottom: 5px;
     padding: 0; }
   .sidebar h3 {
-    font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
+    font-weight: bold;
     margin-top: 0; }
   @media (max-width: 768px) {
     .sidebar li {
@@ -348,7 +346,7 @@ a.external:after {
     float: left; }
   .catlinks ul {
     display: inline;
-    font-family: "proxima_nova_alt_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     padding: 0; }
     .catlinks ul li {
@@ -515,7 +513,7 @@ footer {
     margin: 0;
     padding: 0; }
     .toc ul li {
-      font-family: "proxima_nova_alt_rgregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       list-style: none;
       margin: 0;
       padding: 0; }
@@ -577,7 +575,7 @@ footer {
   font-weight: bold; }
 
 .mw-changeslist-title {
-  font-family: "proxima_nova_alt_rgbold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-weight: bold; }
 
 .page-Special_UserLogin_signup #userloginForm,
 .page-Special_UserLogin_signup .mw-createacct-benefits-container {
@@ -590,6 +588,18 @@ footer {
   color: #4B3C1C;
   padding: 10px 20px;
   margin-bottom: 20px; }
+
+#siteNotice {
+  background: #FCF2BF;
+  border-radius: 3px;
+  border: 1px solid #d4b97f;
+  color: #4B3C1C;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-bottom: 15px;
+  padding: 10px 20px; }
+  #siteNotice p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin-bottom: 0; }
 
 @media print {
   .header,
