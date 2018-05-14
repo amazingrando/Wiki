@@ -1,0 +1,7 @@
+.ul-two-column {
+  ul {
+    @media screen and (min-width: 768px) {
+      column-count: 2;
+    }
+  }
+}
