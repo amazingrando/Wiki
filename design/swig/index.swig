@@ -6,18 +6,18 @@
 
 {% if output == 'php' %}
   The operands can be also be string or number literals
-{% else %}
-  Else
 {% endif %}
-
-
 
 
 {% include 'templates/_header.tpl' %}
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-9 col-sm-push-3">
+    <div class="col-sm-3">
+      {% include 'templates/_sidebar.tpl' %}
+    </div>
+
+    <div class="col-sm-9">
       <div class="main-content-container">
         <div class="row">
 
@@ -43,10 +43,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="col-sm-3 col-sm-pull-9">
-      {% include 'templates/_sidebar.tpl' %}
     </div>
   </div>
 </div>

@@ -109,103 +109,108 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 
 
 
-<div class="container-fluid container-fluid-fix">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-10 col-md-push-2 main-content-container-wrapper">
-      <div class="main-content-container">
-        <div class="row main-content-utilities">
 
-          <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right">
-            <div class="text-right search--wrapper">
-              <form
-                action="<?php $this->text( 'wgScript' ) ?>"
-                role="search"
+		<div class="col-sm-3 col-md-3 col-lg-2 sidebar-wrapper">
+      <aside class="sidebar" id="primaryMenu">
+      <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
+      <?php
+				foreach ( $this->getSidebar() as $boxName => $box ) {
+					$this->outputPortlet( $box );
+				}
+			?>
+	    </aside>
+    </div>
 
-                class="mw-portlet"
-                id="p-search"
-              >
-                <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-
-                <!--<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>-->
-
-                <?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-                <?php echo $this->makeSearchButton( 'go' ) ?>
-
-              </form>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-sm-pull-6">
-            <nav class="nav-page">
-            <?php
+    <div class="col-sm-9 col-md-9 col-lg-10 main-content-container-wrapper">
+			<div class="foo" style="padding: 0 15px;">
+				<div class="row main-content-utilities">
+	        <div class="col-sm-6">
+						<nav class="nav-page">
+	          <?php
 							$this->outputPortlet( array(
 								'id' => 'p-namespaces',
 								'headerMessage' => 'namespaces',
 								'content' => $this->data['content_navigation']['namespaces'],
 							) );
 							 ?>
-            </nav>
-          </div>
+	          </nav>
+	        </div>
+	        <div class="col-sm-6 text-right">
+						<div class="text-right search--wrapper">
+	            <form
+	              action="<?php $this->text( 'wgScript' ) ?>"
+	              role="search"
+	              class="mw-portlet"
+	              id="p-search"
+	            >
+	              <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+	              <?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
+	              <?php echo $this->makeSearchButton( 'go' ) ?>
+	            </form>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="row">
+	          <div class="col-xs-12">
+	            <article class="main-content-wrapper">
 
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <article class="main-content-wrapper">
+	              <div class="row main-content-nav">
+	                <div class="col-sm-6">
+	                <?php
+	                  $this->outputPortlet( array(
+	                    'id' => 'p-views',
+	                    'headerMessage' => 'views',
+	                    'content' => $this->data['content_navigation']['views'],
+	                  ) );
+	                   ?>
+	                </div>
 
-              <div class="row main-content-nav">
-                <div class="col-sm-6">
-                <?php
-                  $this->outputPortlet( array(
-                    'id' => 'p-views',
-                    'headerMessage' => 'views',
-                    'content' => $this->data['content_navigation']['views'],
-                  ) );
-                   ?>
-                </div>
+	                <div class="col-sm-6 text-right--sm">
+	                <?php
+										$this->outputPortlet( array(
+											'id' => 'p-actions',
+											'headerMessage' => 'actions',
+											'content' => $this->data['content_navigation']['actions'],
+										) );
+									 ?>
+	                </div>
+	              </div>
+	              <div class="mw-content-ltr main-content">
 
-                <div class="col-sm-6 text-right--sm">
-                <?php
-									$this->outputPortlet( array(
-										'id' => 'p-actions',
-										'headerMessage' => 'actions',
-										'content' => $this->data['content_navigation']['actions'],
-									) );
-								 ?>
-                </div>
-              </div>
-              <div class="mw-content-ltr main-content">
+	              <?php if ( $this->data['sitenotice'] ) { ?>
+	                <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
+	              <?php } ?>
 
-              <?php if ( $this->data['sitenotice'] ) { ?>
-                <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
-              <?php } ?>
+	              <?php if ( $this->data['newtalk'] ) { ?>
+	                <div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
+	              <?php } ?>
 
-              <?php if ( $this->data['newtalk'] ) { ?>
-                <div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
-              <?php } ?>
+	              <h1 class="page-title">
+	                <?php $this->html( 'title' ) ?>
+	              </h1>
 
-              <h1 class="page-title">
-                <?php $this->html( 'title' ) ?>
-              </h1>
+	              <!--<div id="siteSub"><?php //$this->msg( 'tagline' ) ?></div>-->
 
-              <!--<div id="siteSub"><?php //$this->msg( 'tagline' ) ?></div>-->
+	              <?php if ( $this->data['subtitle'] ) { ?>
+	                <p><?php $this->html( 'subtitle' ) ?></p>
+	              <?php } ?>
+	              <?php if ( $this->data['undelete'] ) { ?>
+	                <p><?php $this->html( 'undelete' ) ?></p>
+	              <?php } ?>
 
-              <?php if ( $this->data['subtitle'] ) { ?>
-                <p><?php $this->html( 'subtitle' ) ?></p>
-              <?php } ?>
-              <?php if ( $this->data['undelete'] ) { ?>
-                <p><?php $this->html( 'undelete' ) ?></p>
-              <?php } ?>
+	              <?php $this->html( 'bodytext' ) ?>
 
-              <?php $this->html( 'bodytext' ) ?>
+	              <?php $this->html( 'catlinks' ) ?>
 
-              <?php $this->html( 'catlinks' ) ?>
+	              <?php $this->html( 'dataAfterContent' ); ?>
+	              </div>
+	            </article>
+	          </div>
+	        </div>
+			</div>
 
-              <?php $this->html( 'dataAfterContent' ); ?>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
       <footer>
         <div class="row">
           <div class="col-xs-12">
@@ -231,17 +236,6 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
           </div>
         </div>
       </footer>
-    </div>
-
-    <div class="col-md-2 col-md-pull-10 sidebar-wrapper">
-      <aside class="sidebar" id="primaryMenu">
-      <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
-      <?php
-				foreach ( $this->getSidebar() as $boxName => $box ) {
-					$this->outputPortlet( $box );
-				}
-			?>
-    </aside>
     </div>
   </div>
 </div>
