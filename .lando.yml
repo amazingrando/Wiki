@@ -1,0 +1,4 @@
+name: wikidesign
+recipe: lamp
+config:
+  webroot: DrinkingAndDragons
