@@ -6,39 +6,40 @@
 //	Date    : Summer 2015
 // 	==================================================================
 
-@import 'common/vars';
-@import 'common/mixins';
-@import 'common/fa-vars';
-@import 'common/icons';
-@import 'common/type';
-@import 'common/links';
-@import 'common/buttons';
-@import 'common/form';
-@import 'common/fonts';
-@import 'common/gallery';
-@import 'common/images';
+@import "common/vars";
+@import "common/mixins";
+@import "common/fa-vars";
+@import "common/icons";
+@import "common/type";
+@import "common/links";
+@import "common/buttons";
+@import "common/form";
+@import "common/fonts";
+@import "common/gallery";
+@import "common/images";
 
-@import 'modules/header';
-@import 'modules/sidebar';
-@import 'modules/main-content';
-@import 'modules/main-content-nav';
-@import 'modules/category-links';
-@import 'modules/nav-page';
-@import 'modules/search';
-@import 'modules/personal-nav';
-@import 'modules/p_namespaces';
-@import 'modules/p_views';
-@import 'modules/footer';
-@import 'modules/toc';
-@import 'modules/prefs';
-@import 'modules/history';
-@import 'modules/recent-changes';
-@import 'modules/create-account';
-@import 'modules/user-message';
-@import 'modules/site-notice';
-@import 'common/print';
+@import "modules/header";
+@import "modules/sidebar";
+@import "modules/main-content";
+@import "modules/main-content-nav";
+@import "modules/category-links";
+@import "modules/nav-page";
+@import "modules/search";
+@import "modules/personal-nav";
+@import "modules/p_namespaces";
+@import "modules/p_views";
+@import "modules/footer";
+@import "modules/toc";
+@import "modules/prefs";
+@import "modules/history";
+@import "modules/recent-changes";
+@import "modules/create-account";
+@import "modules/user-message";
+@import "modules/site-notice";
+@import "modules/faux-checkbox";
+@import "common/print";
 
 body {
-  background: url('../img/bkg.jpg') top left $yellow;
+  background: url("../img/bkg.jpg") top left $yellow;
   padding-bottom: 50px;
 }

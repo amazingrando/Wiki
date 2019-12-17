@@ -1,0 +1,13 @@
+[data-faux-check] {
+  display: block;
+  width: 17px;
+  height: 14px;
+  background: url("http://randyoest.com/random/Unchecked.png") no-repeat top
+    left;
+  background-size: 100% 100%;
+  transition: all 0.5s;
+
+  &.checked {
+    background-image: url("http://randyoest.com/random/Checked.png");
+  }
+}
