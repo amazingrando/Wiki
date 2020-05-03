@@ -1,0 +1,21 @@
+<div class="row d-flex align-items-end">
+  <div class="col">
+
+    {% block mainPageNav %}
+      <div role="navigation" class="mw-portlet pl-4" id="p-namespaces">
+        <h3>Namespaces</h3>
+        <ul>
+          <li id="ca-nstab-main" class="selected"><a href="/wiki/Main_Page" title="View the content page [ctrl-option-c]" accesskey="c">Main page</a></li>
+          <li id="ca-talk"><a href="/wiki/Talk:Main_Page" rel="discussion" title="Discussion about the content page [ctrl-option-t]" accesskey="t">Discussion</a></li>
+        </ul>
+      </div>
+    {% endblock %}
+
+  </div>
+
+  <div class="col">
+    <div class="text-right search--wrapper">
+      {% include "_search.twig" %}
+    </div>
+  </div>
+</div>

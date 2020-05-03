@@ -148,6 +148,8 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
           </div>
 
         </div>
+
+
         <div class="row">
           <div class="col-xs-12">
             <article class="main-content-wrapper">
@@ -235,13 +237,13 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 
     <div class="col-md-2 col-md-pull-10 sidebar-wrapper">
       <aside class="sidebar" id="primaryMenu">
-      <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
-      <?php
-				foreach ( $this->getSidebar() as $boxName => $box ) {
-					$this->outputPortlet( $box );
-				}
-			?>
-    </aside>
+        <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
+        <?php
+          foreach ( $this->getSidebar() as $boxName => $box ) {
+            $this->outputPortlet( $box );
+          }
+        ?>
+      </aside>
     </div>
   </div>
 </div>

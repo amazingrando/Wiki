@@ -1,0 +1,42 @@
+<section class="main-content-wrapper">
+  <div class="row main-content-nav">
+    <div class="col-sm">
+    {% block mainEditingTools %}
+      <div role="navigation" class="mw-portlet" id="p-views">
+        <h3>Views</h3>
+        <ul>
+          <li id="ca-view" class="selected"><a href="/wiki/Main_Page" redundant="1">View</a></li><li id="ca-edit"><a href="/w/index.php?title=Main_Page&amp;action=edit" title="Edit this page [ctrl-option-e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Main_Page&amp;action=history" title="Past revisions of this page [ctrl-option-h]" accesskey="h">History</a></li>
+        </ul>
+      </div>
+    {% endblock %}
+    </div>
+
+    <div class="col-sm">
+
+    {% block mainPageActions %}
+      <div role="navigation" class="mw-portlet" id="p-actions">
+        <h3>Actions</h3>
+        <ul>
+          <li id="ca-delete"><a href="/w/index.php?title=Main_Page&amp;action=delete" title="Delete this page [ctrl-option-d]" accesskey="d">Delete</a></li><li id="ca-move"><a href="/wiki/Special:MovePage/Main_Page" title="Move this page [ctrl-option-m]" accesskey="m">Move</a></li><li id="ca-protect"><a href="/w/index.php?title=Main_Page&amp;action=protect" title="Protect this page [ctrl-option-=]" accesskey="=">Protect</a></li><li id="ca-watch" class="mw-watchlink"><a href="/w/index.php?title=Main_Page&amp;action=watch" data-mw="interface" title="Add this page to your watchlist [ctrl-option-w]" accesskey="w">Watch</a></li>
+        </ul>
+      </div>
+    {% endblock %}
+
+    </div>
+  </div>
+
+  <main class="main-content">
+    {% include "_sitenotice.twig" %}
+
+    <h1 class="page-title">
+      {% block pageTitle %}Page Title{% endblock %}
+    </h1>
+    {% block subtitle %}{% endblock %}
+    {% block undelete %}{% endblock %}
+
+    {% include "_body.twig" %}
+    {% include "_categories.twig" %}
+    {% block dataAfterContent %}{% endblock %}
+
+  </main>
+</section>

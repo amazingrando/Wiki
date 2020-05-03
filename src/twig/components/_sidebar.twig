@@ -1,0 +1,11 @@
+<aside class="sidebar" id="primaryMenu">
+  <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
+
+  {% block sidebar %}
+    {% include "_sidebar--wiki-nav.twig" %}
+    {% include "_sidebar--campaigns.twig" %}
+    {% include "_sidebar--previous-campaigns.twig" %}
+    {% include "_sidebar--tools.twig" %}
+  {% endblock %}
+
+</aside>
