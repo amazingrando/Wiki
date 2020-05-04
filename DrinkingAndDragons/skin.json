@@ -16,12 +16,6 @@
   "ResourceModules": {
     "skins.drinkinganddragons": {
       "styles": {
-        "css/bootstrap.min.css": {
-          "media": "screen"
-        },
-        "css/font-awesome.min.css": {
-          "media": "screen"
-        },
         "css/main.css": {
           "media": "screen"
         }

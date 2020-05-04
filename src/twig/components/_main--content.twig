@@ -38,8 +38,9 @@
     {% block subtitle %}{% endblock %}
     {% block undelete %}{% endblock %}
 
-    {% include "_body.twig" %}
-    {% include "_categories.twig" %}
+    {% block mainContentArea %}{% include "_body.twig" %}{% endblock %}
+    {% block categories %}{% include "_categories.twig" %}{% endblock %}
+
     {% block dataAfterContent %}{% endblock %}
 
   </main>

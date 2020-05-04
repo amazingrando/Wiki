@@ -19431,6 +19431,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
 }
 .catlinks ul li {
   margin: 0;
@@ -19737,6 +19738,27 @@ body {
 }
 #p-namespaces ul li.new a {
   color: #922a1e;
+}
+
+.usermessage {
+  background-color: #fcf2bf;
+  border: 1px solid #c19a46;
+  border-radius: 3px;
+  color: #4b3c1c;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+#siteNotice {
+  background: #fcf2bf;
+  border-radius: 3px;
+  border: 1px solid #d4b97f;
+  color: #4b3c1c;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+}
+#siteNotice p {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 500px) {
