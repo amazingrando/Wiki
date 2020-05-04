@@ -11,27 +11,24 @@
     "drinkinganddragons": "DrinkingAndDragons"
   },
   "MessagesDirs": {
-    "DrinkingAndDragons": [
-      "i18n"
-    ]
+    "DrinkingAndDragons": ["i18n"]
   },
   "ResourceModules": {
     "skins.drinkinganddragons": {
       "styles": {
         "css/bootstrap.min.css": {
-          "media": "screen,print"
+          "media": "screen"
         },
         "css/font-awesome.min.css": {
-          "media": "screen,print"
+          "media": "screen"
         },
         "css/main.css": {
-          "media": "screen,print"
+          "media": "screen"
         }
-      },
-      "scripts": [
-        "js/main.js"
-      ],
-      "position": "top"
+      }
+    },
+    "skins.drinkinganddragonsjs": {
+      "scripts": ["js/main.js"]
     }
   },
 
