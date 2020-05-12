@@ -84,107 +84,110 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 	public function execute() {
 		$this->html( 'headelement' ) ?>
 
-    <header class="header row align-items-center px-4">
-      {% embed "components/_header.twig" %}
-        {% block personalTools %}
-          <?php
-            $this->outputPortlet( array(
-              'id' => 'p-personal',
-              'headerMessage' => 'personaltools',
-              'content' => $this->getPersonalTools(),
-            ) );
-          ?>
-        {% endblock %}
-      {% endembed %}
-    </header>
+    <div class="container-fluid">
 
-    <div class="layout row px-4">
-      <div class="col order-lg-2 pb-5 pb-lg-0">
-        {% embed "components/_main--utilities.twig" %}
-          {% block mainPageNav %}
+      <header class="header row align-items-center px-4">
+        {% embed "components/_header.twig" %}
+          {% block personalTools %}
             <?php
               $this->outputPortlet( array(
-                'id' => 'p-namespaces',
-                'headerMessage' => 'namespaces',
-                'content' => $this->data['content_navigation']['namespaces'],
+                'id' => 'p-personal',
+                'headerMessage' => 'personaltools',
+                'content' => $this->getPersonalTools(),
               ) );
-                ?>
-          {% endblock %}
-
-          {% block search %}
-            <form action="<?php $this->text( 'wgScript' ) ?>" role="search" class="mw-portlet" id="p-search">
-              <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-
-              <?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-              <?php echo $this->makeSearchButton( 'go' ) ?>
-
-            </form>
-          {% endblock %}
-
-        {% endembed %}
-
-        <section class="main-content-wrapper">
-          <div class="row main-content-nav">
-            <div class="col-sm">
-            {% block mainEditingTools %}
-                <?php
-                  $this->outputPortlet( array(
-                    'id' => 'p-views',
-                    'headerMessage' => 'views',
-                    'content' => $this->data['content_navigation']['views'],
-                  ) );
-                    ?>
-              {% endblock %}
-            </div>
-
-            <div class="col-sm">
-
-              {% block mainPageActions %}
-                <?php
-                  $this->outputPortlet( array(
-                    'id' => 'p-actions',
-                    'headerMessage' => 'actions',
-                    'content' => $this->data['content_navigation']['actions'],
-                  ) );
-                    ?>
-              {% endblock %}
-
-            </div>
-          </div>
-
-          <main class="main-content">
-
-            <?php if ( $this->data['sitenotice'] ) { ?>
-              <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
-            <?php } ?>
-
-            <?php if ( $this->data['newtalk'] ) { ?>
-              <div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
-            <?php } ?>
-
-            <h1 class="page-title">
-            <?php $this->html( 'title' ) ?>
-            </h1>
-
-            <?php $this->html( 'bodytext' ) ?>
-
-            <?php $this->html( 'catlinks' ) ?>
-
-            <?php $this->html( 'dataAfterContent' ); ?>
-          </main>
-        </section>
-      </div>
-
-      <div class="col-lg-auto order-lg-1 px-3 px-lg-0">
-        {% embed "components/_sidebar.twig" %}
-          {% block sidebar %}
-            <?php
-              foreach ( $this->getSidebar() as $boxName => $box ) {
-                $this->outputPortlet( $box );
-              }
             ?>
           {% endblock %}
         {% endembed %}
+      </header>
+
+      <div class="layout row px-4">
+        <div class="col order-lg-2 pb-5 pb-lg-0">
+          {% embed "components/_main--utilities.twig" %}
+            {% block mainPageNav %}
+              <?php
+                $this->outputPortlet( array(
+                  'id' => 'p-namespaces',
+                  'headerMessage' => 'namespaces',
+                  'content' => $this->data['content_navigation']['namespaces'],
+                ) );
+                  ?>
+            {% endblock %}
+
+            {% block search %}
+              <form action="<?php $this->text( 'wgScript' ) ?>" role="search" class="mw-portlet" id="p-search">
+                <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+
+                <?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
+                <?php echo $this->makeSearchButton( 'go' ) ?>
+
+              </form>
+            {% endblock %}
+
+          {% endembed %}
+
+          <section class="main-content-wrapper mb-5">
+            <div class="row main-content-nav">
+              <div class="col-sm">
+              {% block mainEditingTools %}
+                  <?php
+                    $this->outputPortlet( array(
+                      'id' => 'p-views',
+                      'headerMessage' => 'views',
+                      'content' => $this->data['content_navigation']['views'],
+                    ) );
+                      ?>
+                {% endblock %}
+              </div>
+
+              <div class="col-sm">
+
+                {% block mainPageActions %}
+                  <?php
+                    $this->outputPortlet( array(
+                      'id' => 'p-actions',
+                      'headerMessage' => 'actions',
+                      'content' => $this->data['content_navigation']['actions'],
+                    ) );
+                      ?>
+                {% endblock %}
+
+              </div>
+            </div>
+
+            <main class="main-content">
+
+              <?php if ( $this->data['sitenotice'] ) { ?>
+                <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
+              <?php } ?>
+
+              <?php if ( $this->data['newtalk'] ) { ?>
+                <div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
+              <?php } ?>
+
+              <h1 class="page-title">
+              <?php $this->html( 'title' ) ?>
+              </h1>
+
+              <?php $this->html( 'bodytext' ) ?>
+
+              <?php $this->html( 'catlinks' ) ?>
+
+              <?php $this->html( 'dataAfterContent' ); ?>
+            </main>
+          </section>
+        </div>
+
+        <div class="col-lg-auto order-lg-1 px-3 px-lg-0">
+          {% embed "components/_sidebar.twig" %}
+            {% block sidebar %}
+              <?php
+                foreach ( $this->getSidebar() as $boxName => $box ) {
+                  $this->outputPortlet( $box );
+                }
+              ?>
+            {% endblock %}
+          {% endembed %}
+        </div>
       </div>
     </div>
 

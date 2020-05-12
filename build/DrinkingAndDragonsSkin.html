@@ -84,37 +84,39 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 	public function execute() {
 		$this->html( 'headelement' ) ?>
 
-    <header class="header row align-items-center px-4">
-      <div class="col-lg">
+    <div class="container-fluid">
+
+      <header class="header row align-items-center px-4">
+        <div class="col-lg">
   <a href="#primaryMenu" id="menu" class="d-lg-none">Menu</a>
   <h1 class="site-name"><a href="/">Drinking &amp; Dragons</a></h1>
 </div>
 
 <div class="col-lg pb-2 pb-lg-0">
 
-            <?php
-            $this->outputPortlet( array(
-              'id' => 'p-personal',
-              'headerMessage' => 'personaltools',
-              'content' => $this->getPersonalTools(),
-            ) );
-          ?>
-        
-</div>    </header>
+              <?php
+              $this->outputPortlet( array(
+                'id' => 'p-personal',
+                'headerMessage' => 'personaltools',
+                'content' => $this->getPersonalTools(),
+              ) );
+            ?>
+          
+</div>      </header>
 
-    <div class="layout row px-4">
-      <div class="col order-lg-2 pb-5 pb-lg-0">
-        <div class="row d-flex align-items-stretch">
+      <div class="layout row px-4">
+        <div class="col order-lg-2 pb-5 pb-lg-0">
+          <div class="row d-flex align-items-stretch">
   <div class="col">
 
-                <?php
-              $this->outputPortlet( array(
-                'id' => 'p-namespaces',
-                'headerMessage' => 'namespaces',
-                'content' => $this->data['content_navigation']['namespaces'],
-              ) );
-                ?>
-          
+                  <?php
+                $this->outputPortlet( array(
+                  'id' => 'p-namespaces',
+                  'headerMessage' => 'namespaces',
+                  'content' => $this->data['content_navigation']['namespaces'],
+                ) );
+                  ?>
+            
   </div>
 
   <div class="col">
@@ -128,65 +130,66 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 </form>    </div>
   </div>
 </div>
-        <section class="main-content-wrapper">
-          <div class="row main-content-nav">
-            <div class="col-sm">
-                            <?php
-                  $this->outputPortlet( array(
-                    'id' => 'p-views',
-                    'headerMessage' => 'views',
-                    'content' => $this->data['content_navigation']['views'],
-                  ) );
-                    ?>
-                          </div>
+          <section class="main-content-wrapper mb-5">
+            <div class="row main-content-nav">
+              <div class="col-sm">
+                                <?php
+                    $this->outputPortlet( array(
+                      'id' => 'p-views',
+                      'headerMessage' => 'views',
+                      'content' => $this->data['content_navigation']['views'],
+                    ) );
+                      ?>
+                              </div>
 
-            <div class="col-sm">
+              <div class="col-sm">
 
-                              <?php
-                  $this->outputPortlet( array(
-                    'id' => 'p-actions',
-                    'headerMessage' => 'actions',
-                    'content' => $this->data['content_navigation']['actions'],
-                  ) );
-                    ?>
-              
+                                  <?php
+                    $this->outputPortlet( array(
+                      'id' => 'p-actions',
+                      'headerMessage' => 'actions',
+                      'content' => $this->data['content_navigation']['actions'],
+                    ) );
+                      ?>
+                
+              </div>
             </div>
-          </div>
 
-          <main class="main-content">
+            <main class="main-content">
 
-            <?php if ( $this->data['sitenotice'] ) { ?>
-              <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
-            <?php } ?>
+              <?php if ( $this->data['sitenotice'] ) { ?>
+                <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
+              <?php } ?>
 
-            <?php if ( $this->data['newtalk'] ) { ?>
-              <div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
-            <?php } ?>
+              <?php if ( $this->data['newtalk'] ) { ?>
+                <div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
+              <?php } ?>
 
-            <h1 class="page-title">
-            <?php $this->html( 'title' ) ?>
-            </h1>
+              <h1 class="page-title">
+              <?php $this->html( 'title' ) ?>
+              </h1>
 
-            <?php $this->html( 'bodytext' ) ?>
+              <?php $this->html( 'bodytext' ) ?>
 
-            <?php $this->html( 'catlinks' ) ?>
+              <?php $this->html( 'catlinks' ) ?>
 
-            <?php $this->html( 'dataAfterContent' ); ?>
-          </main>
-        </section>
+              <?php $this->html( 'dataAfterContent' ); ?>
+            </main>
+          </section>
+        </div>
+
+        <div class="col-lg-auto order-lg-1 px-3 px-lg-0">
+          <aside class="sidebar" id="primaryMenu">
+  <a href="#top" class="d-lg-none btn btn-link">Back to Top</a>
+
+                <?php
+                foreach ( $this->getSidebar() as $boxName => $box ) {
+                  $this->outputPortlet( $box );
+                }
+              ?>
+            
+</aside>        </div>
       </div>
-
-      <div class="col-lg-auto order-lg-1 px-3 px-lg-0">
-        <aside class="sidebar" id="primaryMenu">
-  <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
-
-              <?php
-              foreach ( $this->getSidebar() as $boxName => $box ) {
-                $this->outputPortlet( $box );
-              }
-            ?>
-          
-</aside>      </div>
     </div>
 
 		<?php $this->printTrail() ?>

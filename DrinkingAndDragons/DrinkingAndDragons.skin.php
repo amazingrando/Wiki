@@ -18,7 +18,6 @@ class SkinDrinkingAndDragons extends SkinTemplate {
 		public function initPage( OutputPage $out ) {
         parent::initPage( $out );
         $out->addModules( 'skins.drinkinganddragonsjs' );
-        // $out->addModuleStyles( 'skins.drinkinganddragons' );
     }
 
 	/**
@@ -30,7 +29,6 @@ class SkinDrinkingAndDragons extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 		$out->addModuleStyles( array(
 			'skins.drinkinganddragons'
-			/* 'skins.foobar' is the name you used in your skin.json file */
 		) );
 	}
 }
@@ -86,95 +84,78 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
 	public function execute() {
 		$this->html( 'headelement' ) ?>
 
-		<header class="container-fluid header">
-      <div class="row">
-        <div class="container-fluid container-fluid-fix">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-5">
-              <a href="#primaryMenu" id="menu" class="visible-xs-inline-block">Menu</a>
-              <h1 class="site-name"><a href="/">Drinking &amp; Dragons</a></h1>
-            </div>
-            <div class="col-sm-12 col-md-7">
+    <div class="container-fluid">
+
+      <header class="header row align-items-center px-4">
+        <div class="col-lg">
+  <a href="#primaryMenu" id="menu" class="d-lg-none">Menu</a>
+  <h1 class="site-name"><a href="/">Drinking &amp; Dragons</a></h1>
+</div>
+
+<div class="col-lg pb-2 pb-lg-0">
+
               <?php
+              $this->outputPortlet( array(
+                'id' => 'p-personal',
+                'headerMessage' => 'personaltools',
+                'content' => $this->getPersonalTools(),
+              ) );
+            ?>
+
+</div>      </header>
+
+      <div class="layout row px-4">
+        <div class="col order-lg-2 pb-5 pb-lg-0">
+          <div class="row d-flex align-items-stretch">
+  <div class="col">
+
+                  <?php
                 $this->outputPortlet( array(
-                  'id' => 'p-personal',
-                  'headerMessage' => 'personaltools',
-                  'content' => $this->getPersonalTools(),
+                  'id' => 'p-namespaces',
+                  'headerMessage' => 'namespaces',
+                  'content' => $this->data['content_navigation']['namespaces'],
                 ) );
-                 ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+                  ?>
 
+  </div>
 
+  <div class="col">
+    <div class="text-right search--wrapper">
+      <form action="/w/index.php" role="search" class="mw-portlet" id="p-search">
+  <input type="hidden" name="title" value="Special:Search">
 
-<div class="container-fluid container-fluid-fix">
-  <div class="row">
-    <div class="col-md-10 col-md-push-2 main-content-container-wrapper">
-      <div class="main-content-container">
-        <div class="row main-content-utilities">
+  <input type="search" name="search" placeholder="Search Drinking and Dragons" title="Search Drinking and Dragons [ctrl-option-f]" accesskey="f" id="searchInput" autocomplete="off">
 
-          <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right">
-            <div class="text-right search--wrapper">
-              <form
-                action="<?php $this->text( 'wgScript' ) ?>"
-                role="search"
+  <input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists">
+</form>    </div>
+  </div>
+</div>
+          <section class="main-content-wrapper mb-5">
+            <div class="row main-content-nav">
+              <div class="col-sm">
+                                <?php
+                    $this->outputPortlet( array(
+                      'id' => 'p-views',
+                      'headerMessage' => 'views',
+                      'content' => $this->data['content_navigation']['views'],
+                    ) );
+                      ?>
+                              </div>
 
-                class="mw-portlet"
-                id="p-search"
-              >
-                <input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+              <div class="col-sm">
 
-                <!--<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>-->
+                                  <?php
+                    $this->outputPortlet( array(
+                      'id' => 'p-actions',
+                      'headerMessage' => 'actions',
+                      'content' => $this->data['content_navigation']['actions'],
+                    ) );
+                      ?>
 
-                <?php echo $this->makeSearchInput( array( "id" => "searchInput" ) ) ?>
-                <?php echo $this->makeSearchButton( 'go' ) ?>
-
-              </form>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-sm-pull-6">
-            <nav class="nav-page">
-            <?php
-							$this->outputPortlet( array(
-								'id' => 'p-namespaces',
-								'headerMessage' => 'namespaces',
-								'content' => $this->data['content_navigation']['namespaces'],
-							) );
-							 ?>
-            </nav>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <article class="main-content-wrapper">
-
-              <div class="row main-content-nav">
-                <div class="col-sm-6">
-                <?php
-                  $this->outputPortlet( array(
-                    'id' => 'p-views',
-                    'headerMessage' => 'views',
-                    'content' => $this->data['content_navigation']['views'],
-                  ) );
-                   ?>
-                </div>
-
-                <div class="col-sm-6 text-right--sm">
-                <?php
-									$this->outputPortlet( array(
-										'id' => 'p-actions',
-										'headerMessage' => 'actions',
-										'content' => $this->data['content_navigation']['actions'],
-									) );
-								 ?>
-                </div>
               </div>
-              <div class="mw-content-ltr main-content">
+            </div>
+
+            <main class="main-content">
 
               <?php if ( $this->data['sitenotice'] ) { ?>
                 <div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
@@ -185,77 +166,31 @@ class DrinkingAndDragonsTemplate extends BaseTemplate {
               <?php } ?>
 
               <h1 class="page-title">
-                <?php $this->html( 'title' ) ?>
+              <?php $this->html( 'title' ) ?>
               </h1>
-
-              <!--<div id="siteSub"><?php //$this->msg( 'tagline' ) ?></div>-->
-
-              <?php if ( $this->data['subtitle'] ) { ?>
-                <p><?php $this->html( 'subtitle' ) ?></p>
-              <?php } ?>
-              <?php if ( $this->data['undelete'] ) { ?>
-                <p><?php $this->html( 'undelete' ) ?></p>
-              <?php } ?>
 
               <?php $this->html( 'bodytext' ) ?>
 
               <?php $this->html( 'catlinks' ) ?>
 
               <?php $this->html( 'dataAfterContent' ); ?>
-              </div>
-            </article>
-          </div>
+            </main>
+          </section>
         </div>
+
+        <div class="col-lg-auto order-lg-1 px-3 px-lg-0">
+          <aside class="sidebar" id="primaryMenu">
+  <a href="#top" class="d-lg-none btn btn-link">Back to Top</a>
+
+                <?php
+                foreach ( $this->getSidebar() as $boxName => $box ) {
+                  $this->outputPortlet( $box );
+                }
+              ?>
+
+</aside>        </div>
       </div>
-      <footer>
-        <div class="row">
-          <div class="col-xs-12">
-            <?php foreach ( $this->getFooterLinks() as $category => $links ) { ?>
-              <ul role="contentinfo">
-                <?php foreach ( $links as $key ) { ?>
-                  <li><?php $this->html( $key ) ?></li>
-                <?php } ?>
-              </ul>
-            <?php } ?>
-
-            <ul role="contentinfo">
-              <?php foreach ( $this->getFooterIcons( 'icononly' ) as $blockName => $footerIcons ) { ?>
-                <li>
-                  <?php
-                  foreach ( $footerIcons as $icon ) {
-                    echo $this->getSkin()->makeFooterIcon( $icon );
-                  }
-                  ?>
-                </li>
-              <?php } ?>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </div>
-
-    <div class="col-md-2 col-md-pull-10 sidebar-wrapper">
-      <aside class="sidebar" id="primaryMenu">
-      <a href="#top" class="visible-xs-block btn btn-link">Back to Top</a>
-      <?php
-				foreach ( $this->getSidebar() as $boxName => $box ) {
-					$this->outputPortlet( $box );
-				}
-			?>
-    </aside>
-    </div>
-  </div>
-</div>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-17557074-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-17557074-1');
-</script>
 
 		<?php $this->printTrail() ?>
 		<?php
